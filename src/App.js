@@ -32,6 +32,31 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
+      //psuedocode:
+      // Name: myPigLatinCode
+      // Input: string
+      // Output: string
+      // Process: storing the first instance of a vowel in the storeVowel variable
+      // locate the first instance of a vowel and store that value in variable named vowelLoc. 
+      // Use conditional statement find if word that starts with a vowel we add way to the end of the last letter. 
+     
+      const storeVowel = vowelsArray[0]
+      console.log("first vowel found", storeVowel);
+      const vowelLoc = eachWord.indexOf(storeVowel)
+      console.log("location of the first vowel in the word",vowelLoc);
+
+      if (vowelLoc === 0){
+       return eachWord + "way"
+      }
+      // const myPigLatinCode = (array) => {
+      //   let holderArray = []
+      //   const addedWord = "way"
+      //   for (let i =0; i < array.length; i++ ){
+      //   }
+      // }
+
+    //  
+
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
@@ -86,7 +111,7 @@ const App = () => {
         </div>
         <p>{inputTranslated}</p>
       </div>
-      <footer>&copy; 2023 | Coded by: Your Names Here!</footer>
+      <footer>&copy; 2023 | Coded by: Louis Anabella Roniel</footer>
     </div>
   )
 }
