@@ -41,13 +41,32 @@ const App = () => {
       // Use conditional statement find if word that starts with a vowel we add way to the end of the last letter. 
      
       const storeVowel = vowelsArray[0]
-      console.log("first vowel found", storeVowel);
+
       const vowelLoc = eachWord.indexOf(storeVowel)
-      console.log("location of the first vowel in the word",vowelLoc);
+      const includesQu = "qu"
+      const includesY = "y"
 
       if (vowelLoc === 0){
        return eachWord + "way"
       }
+        else if (eachWord.includes(includesQu) && vowelLoc === 1) {
+          return eachWord.substring(2) + "quay" 
+        }
+   
+        else if (eachWord.includes(includesY) && vowelLoc === -1) {
+          return "y" + eachWord + "ay"
+
+        }
+
+      
+
+      // Psuedo:
+      // input: string
+      // output: string
+      // process: storing the first instance of a vowel in the storeVowel variable
+      // locate the first instance of a vowel and store that value in variable named vowelLoc. 
+      // Use conditional statement find if "qu" is in the string & if the vowelLoc index is at 1. 
+
       // const myPigLatinCode = (array) => {
       //   let holderArray = []
       //   const addedWord = "way"
